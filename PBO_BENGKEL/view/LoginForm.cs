@@ -91,5 +91,10 @@ namespace PBO_BENGKEL.view
         {
 
         }
+
+        private void label99_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

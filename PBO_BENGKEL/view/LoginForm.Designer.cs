@@ -35,13 +35,14 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.namabengkel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label99 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(36, 41);
+            this.username.Location = new System.Drawing.Point(72, 83);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(55, 13);
             this.username.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Black;
             this.txtUsername.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUsername.Location = new System.Drawing.Point(107, 38);
+            this.txtUsername.Location = new System.Drawing.Point(143, 80);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 1;
@@ -60,7 +61,7 @@
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Location = new System.Drawing.Point(36, 70);
+            this.Password.Location = new System.Drawing.Point(72, 109);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(53, 13);
             this.Password.TabIndex = 3;
@@ -70,7 +71,7 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtPassword.Location = new System.Drawing.Point(107, 67);
+            this.txtPassword.Location = new System.Drawing.Point(143, 106);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 4;
@@ -81,7 +82,7 @@
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(39, 102);
+            this.btnLogin.Location = new System.Drawing.Point(75, 132);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(168, 23);
             this.btnLogin.TabIndex = 5;
@@ -93,26 +94,38 @@
             // 
             this.namabengkel.AutoSize = true;
             this.namabengkel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namabengkel.Location = new System.Drawing.Point(16, 16);
+            this.namabengkel.Location = new System.Drawing.Point(12, 47);
             this.namabengkel.Name = "namabengkel";
-            this.namabengkel.Size = new System.Drawing.Size(219, 18);
+            this.namabengkel.Size = new System.Drawing.Size(276, 18);
             this.namabengkel.TabIndex = 6;
-            this.namabengkel.Text = "Management Bengkel Motor";
+            this.namabengkel.Text = "Sistem Management Bengkel Motor";
             this.namabengkel.Click += new System.EventHandler(this.namabengkel_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.label99);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.namabengkel);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.Password);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.username);
-            this.panel1.Location = new System.Drawing.Point(269, 139);
+            this.panel1.Location = new System.Drawing.Point(251, 125);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 145);
+            this.panel1.Size = new System.Drawing.Size(301, 172);
             this.panel1.TabIndex = 8;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(116, 17);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(73, 18);
+            this.label99.TabIndex = 9;
+            this.label99.Text = "SIMBEM";
+            this.label99.Click += new System.EventHandler(this.label99_Click);
             // 
             // LoginForm
             // 
@@ -139,6 +152,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label namabengkel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label99;
     }
 }
 

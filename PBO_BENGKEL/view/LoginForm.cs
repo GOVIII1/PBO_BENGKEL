@@ -48,7 +48,7 @@ namespace PBO_BENGKEL.view
 
                     if (role == "Admin")
                     {
-                        AdminForm formAdmin = new AdminForm();
+                        AdminDashboardForm formAdmin = new AdminDashboardForm();
                         formAdmin.Show();
                     }
                     else if (role == "Kasir")

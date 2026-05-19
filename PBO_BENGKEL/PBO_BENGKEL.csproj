@@ -95,11 +95,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="view\AdminForm.cs">
+    <Compile Include="model\Jasa_cls.cs" />
+    <Compile Include="model\Sparepart_cls.cs" />
+    <Compile Include="service\AdminJasa_service.cs" />
+    <Compile Include="service\AdminSparepart_service.cs" />
+    <Compile Include="view\AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="view\AdminDashboardForm.Designer.cs">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\AdminJasaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AdminJasaForm.Designer.cs">
+      <DependentUpon>AdminJasaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\AdminSparepartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AdminSparepartForm.Designer.cs">
+      <DependentUpon>AdminSparepartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="view\KasirForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +138,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="view\AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\AdminJasaForm.resx">
+      <DependentUpon>AdminJasaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\AdminSparepartForm.resx">
+      <DependentUpon>AdminSparepartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,9 +173,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="model\" />
-    <Folder Include="service\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

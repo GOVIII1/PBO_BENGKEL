@@ -85,5 +85,10 @@ namespace PBO_BENGKEL.view
                 txtTarif.Text = baris.Cells["Tarif Harga"].Value.ToString();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

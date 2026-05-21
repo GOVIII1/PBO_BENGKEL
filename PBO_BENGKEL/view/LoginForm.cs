@@ -48,16 +48,19 @@ namespace PBO_BENGKEL.view
 
                     if (role == "Admin")
                     {
+                        // # GANTI JADI INI WIR: Panggil AdminDashboardForm punya lu
                         AdminDashboardForm formAdmin = new AdminDashboardForm();
                         formAdmin.Show();
                     }
                     else if (role == "Kasir")
                     {
-                        KasirForm formKasir = new KasirForm();
-                        formKasir.Show();
+                        // # Kalo form kasir belum ada, mending di-comment dulu aja depannya pake garis miring dua // biar ga error
+                        // dashboard formKasir = new dashboard();
+                        // formKasir.Show();
                     }
                     else if (role == "Mekanik")
                     {
+                        // # Pastiin form MekanikForm beneran udah dibikin sama Arum
                         MekanikForm formMekanik = new MekanikForm();
                         formMekanik.Show();
                     }
@@ -92,9 +95,9 @@ namespace PBO_BENGKEL.view
 
         }
 
-        private void label99_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

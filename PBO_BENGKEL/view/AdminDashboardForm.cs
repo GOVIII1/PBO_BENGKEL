@@ -28,7 +28,10 @@ namespace PBO_BENGKEL.view
         private void button2_Click(object sender, EventArgs e)
         {
             AdminSparepartForm formPart = new AdminSparepartForm();
+            formPart.StartPosition = FormStartPosition.Manual;
+            formPart.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
             formPart.ShowDialog();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -38,6 +41,14 @@ namespace PBO_BENGKEL.view
             // Munculkan kembali form login
             LoginForm formLogin = new LoginForm();
             formLogin.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LihatPesanan pesanan = new LihatPesanan();
+            pesanan.StartPosition = FormStartPosition.Manual;
+            pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
+            pesanan.Show();
         }
     }
 }

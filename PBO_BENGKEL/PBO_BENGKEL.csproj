@@ -96,9 +96,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Jasa_cls.cs" />
+    <Compile Include="model\Pesanan_cls.cs" />
     <Compile Include="model\Sparepart_cls.cs" />
     <Compile Include="service\AdminJasa_service.cs" />
     <Compile Include="service\AdminSparepart_service.cs" />
+    <Compile Include="service\AdminPesanan_service.cs" />
     <Compile Include="view\AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\AdminSparepartForm.resx">
       <DependentUpon>AdminSparepartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LihatPesanan.resx">
+      <DependentUpon>LihatPesanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Projek.model
+
+namespace PBO_BENGKEL.model
 {
     public class DetailTagihan
     {

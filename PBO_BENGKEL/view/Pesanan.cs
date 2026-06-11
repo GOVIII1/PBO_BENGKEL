@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
-using Projek.model;   // Memanggil folder model
-using Projek.service; // Memanggil folder service
-using Projek.model;   // Memanggil folder model
-using Projek.service; // Memanggil folder service
+using PBO_BENGKEL.model;   // Memanggil folder model
+using PBO_BENGKEL.service; // Memanggil folder service
 
-namespace Projek.view
+namespace PBO_BENGKEL.view
 {
     public partial class FormTambahPesanan : Form
     {
         // Membuat objek dari PesananService untuk mengakses database
         private PesananService _pesananService;
-        
+
         // Variabel internal untuk menampung ID otomatis di latar belakang (tidak ditampilkan ke user)
         private string _idServisOtomatis;
 
@@ -35,8 +33,8 @@ namespace Projek.view
         private void btnTambah_Click(object sender, EventArgs e)
         {
             // 1. Validasi input untuk memastikan data penting tidak dikosongkan oleh kasir
-            if (string.IsNullOrWhiteSpace(txtNama.Text) || 
-                string.IsNullOrWhiteSpace(txtNoHp.Text) || 
+            if (string.IsNullOrWhiteSpace(txtNama.Text) ||
+                string.IsNullOrWhiteSpace(txtNoHp.Text) ||
                 string.IsNullOrWhiteSpace(txtPlat.Text))
             {
                 MessageBox.Show("Data Nama, Nomor Handphone, dan Plat Nomor wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -59,10 +57,10 @@ namespace Projek.view
             if (berhasilSimpan)
             {
                 MessageBox.Show("Data pesanan kasir berhasil disimpan ke database!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 // Set DialogResult ke OK untuk memberi sinyal ke Form Utama agar melakukan refresh data pada DataGridView
                 this.DialogResult = DialogResult.OK;
-                this.Close(); 
+                this.Close();
             }
             else
             {
@@ -72,13 +70,17 @@ namespace Projek.view
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            
             this.Close();
         }
 
         private void txtIdServis_TextChanged(object sender, EventArgs e)
         {
             // Tetap dikosongkan karena textbox sudah disembunyikan
+        }
+
+        private void lblJudulForm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

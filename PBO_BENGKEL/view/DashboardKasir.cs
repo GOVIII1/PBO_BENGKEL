@@ -1,4 +1,4 @@
-﻿using Projek.service;
+﻿using PBO_BENGKEL.service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projek.view
+namespace PBO_BENGKEL.view
 {
     public partial class DashboardKasir : Form
     {
@@ -55,6 +55,11 @@ namespace Projek.view
         private void pesanan_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Tempat aksi jika cell dgv diklik (bisa dikosongkan dulu)
+        }
+
+        private void panelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -95,33 +95,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\BayarModel.cs" />
     <Compile Include="model\Jasa_cls.cs" />
+    <Compile Include="model\PesananModel.cs" />
     <Compile Include="model\Sparepart_cls.cs" />
     <Compile Include="service\AdminJasa_service.cs" />
     <Compile Include="service\AdminSparepart_service.cs" />
-    <Compile Include="view\AdminDashboardForm.cs">
+    <Compile Include="service\BayarService.cs" />
+    <Compile Include="service\PesananService.cs" />
+    <Compile Include="view\admin\AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AdminDashboardForm.Designer.cs">
+    <Compile Include="view\admin\AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\AdminForm.cs">
+    <Compile Include="view\admin\AdminJasaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\AdminJasaForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\AdminJasaForm.Designer.cs">
+    <Compile Include="view\admin\AdminJasaForm.Designer.cs">
       <DependentUpon>AdminJasaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\AdminSparepartForm.cs">
+    <Compile Include="view\admin\AdminSparepartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AdminSparepartForm.Designer.cs">
+    <Compile Include="view\admin\AdminSparepartForm.Designer.cs">
       <DependentUpon>AdminSparepartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\bayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\bayar.Designer.cs">
+      <DependentUpon>bayar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DashboardKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardKasir.Designer.cs">
+      <DependentUpon>DashboardKasir.cs</DependentUpon>
     </Compile>
     <Compile Include="view\DetailPesanan_frm.cs">
       <SubType>Form</SubType>
@@ -156,14 +166,26 @@
     <Compile Include="view\MekanikForm.Designer.cs">
       <DependentUpon>MekanikForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\AdminDashboardForm.resx">
+    <Compile Include="view\Pesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Pesanan.Designer.cs">
+      <DependentUpon>Pesanan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\admin\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\AdminJasaForm.resx">
+    <EmbeddedResource Include="view\admin\AdminJasaForm.resx">
       <DependentUpon>AdminJasaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\AdminSparepartForm.resx">
+    <EmbeddedResource Include="view\admin\AdminSparepartForm.resx">
       <DependentUpon>AdminSparepartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\bayar.resx">
+      <DependentUpon>bayar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardKasir.resx">
+      <DependentUpon>DashboardKasir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\DetailPesanan_frm.resx">
       <DependentUpon>DetailPesanan_frm.cs</DependentUpon>
@@ -182,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="view\MekanikForm.resx">
       <DependentUpon>MekanikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Pesanan.resx">
+      <DependentUpon>Pesanan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

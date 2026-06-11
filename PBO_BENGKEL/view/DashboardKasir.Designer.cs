@@ -1,4 +1,4 @@
-﻿namespace Projek.view
+﻿namespace PBO_BENGKEL.view
 {
     partial class DashboardKasir
     {
@@ -31,13 +31,13 @@
             this.lblJudulTop = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pesanan_dgv = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.id_servis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.no_hp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.keluhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pesanan_dgv)).BeginInit();
             this.SuspendLayout();
@@ -47,10 +47,9 @@
             this.lblJudulTop.AutoSize = true;
             this.lblJudulTop.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJudulTop.ForeColor = System.Drawing.Color.White;
-            this.lblJudulTop.Location = new System.Drawing.Point(387, 18);
-            this.lblJudulTop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJudulTop.Location = new System.Drawing.Point(290, 15);
             this.lblJudulTop.Name = "lblJudulTop";
-            this.lblJudulTop.Size = new System.Drawing.Size(237, 37);
+            this.lblJudulTop.Size = new System.Drawing.Size(190, 30);
             this.lblJudulTop.TabIndex = 0;
             this.lblJudulTop.Text = "DEALER YAAMBA";
             // 
@@ -60,10 +59,10 @@
             this.panelHeader.Controls.Add(this.lblJudulTop);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(932, 74);
+            this.panelHeader.Size = new System.Drawing.Size(699, 60);
             this.panelHeader.TabIndex = 1;
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
             // 
             // pesanan_dgv
             // 
@@ -76,33 +75,15 @@
             this.no_hp,
             this.keluhan,
             this.status});
-            this.pesanan_dgv.Location = new System.Drawing.Point(0, 267);
+            this.pesanan_dgv.Location = new System.Drawing.Point(0, 217);
+            this.pesanan_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pesanan_dgv.Name = "pesanan_dgv";
             this.pesanan_dgv.ReadOnly = true;
             this.pesanan_dgv.RowHeadersWidth = 51;
             this.pesanan_dgv.RowTemplate.Height = 24;
-            this.pesanan_dgv.Size = new System.Drawing.Size(932, 340);
+            this.pesanan_dgv.Size = new System.Drawing.Size(699, 276);
             this.pesanan_dgv.TabIndex = 2;
             this.pesanan_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pesanan_dgv_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(492, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 43);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tambah Pesanan";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(298, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 43);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Selesai Pesanan";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // id_servis
             // 
@@ -149,15 +130,37 @@
             this.status.ReadOnly = true;
             this.status.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(369, 145);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Tambah Pesanan";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(224, 145);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 35);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Selesai Pesanan";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // DashboardKasir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 607);
+            this.ClientSize = new System.Drawing.Size(699, 493);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pesanan_dgv);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DashboardKasir";
             this.Text = "DashboardKasir";
             this.panelHeader.ResumeLayout(false);

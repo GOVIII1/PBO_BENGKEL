@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
-using Projek.model;
+using PBO_BENGKEL.model;
 
-namespace Projek.service
+namespace PBO_BENGKEL.service
 {
     public class BayarService
     {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projek.model
+namespace PBO_BENGKEL.model
 {
-    internal class PesananModel
+    public class PesananModel
     {
         public string IdServis { get; set; }
         public string NamaPelanggan { get; set; }

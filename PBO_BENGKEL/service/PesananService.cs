@@ -1,5 +1,5 @@
-﻿using Projek.konfigurasi;
-using Projek.model;
+﻿using PBO_BENGKEL.konfigurasi;
+using PBO_BENGKEL.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projek.service
+
+namespace PBO_BENGKEL.service
 {
-    internal class PesananService : koneksi_cls.Koneksi_cls
+    internal class PesananService : Koneksi
     {
         // 1. LOGIKA GENERATE ID OTOMATIS (Mencari nilai ID tertinggi + 1)
         public int GenerateAutoId()

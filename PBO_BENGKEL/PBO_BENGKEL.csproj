@@ -123,6 +123,12 @@
     <Compile Include="view\DetailPesanan_frm.Designer.cs">
       <DependentUpon>DetailPesanan_frm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FormTindakanMekanik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormTindakanMekanik.Designer.cs">
+      <DependentUpon>FormTindakanMekanik.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\KasirForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     <Compile Include="view\MekanikForm.Designer.cs">
       <DependentUpon>MekanikForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\MekanikForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MekanikForm2.Designer.cs">
+      <DependentUpon>MekanikForm2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="view\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\DetailPesanan_frm.resx">
       <DependentUpon>DetailPesanan_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormTindakanMekanik.resx">
+      <DependentUpon>FormTindakanMekanik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -170,6 +185,9 @@
     </Compile>
     <EmbeddedResource Include="view\MekanikForm.resx">
       <DependentUpon>MekanikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MekanikForm2.resx">
+      <DependentUpon>MekanikForm2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

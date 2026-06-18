@@ -33,6 +33,11 @@ namespace PBO_BENGKEL.view
         {
             this.Close();
         }
+
+        private void LihatPesanan_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

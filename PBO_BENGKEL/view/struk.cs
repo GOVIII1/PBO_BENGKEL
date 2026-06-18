@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBO_BENGKEL.view
 {
-    public partial class struk : Form
+    public partial class Struk : Form
     {
-        public struk()
+        public Struk()
         {
             InitializeComponent();
         }

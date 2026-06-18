@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using PBO_BENGKEL.service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,35 @@ namespace PBO_BENGKEL.view
 {
     public partial class AdminDashboardForm : Form
     {
+        private AdminDashboard_service srvDashboard;
         public AdminDashboardForm()
         {
             InitializeComponent();
+            srvDashboard = new AdminDashboard_service();
+        }
+
+
+        private void AdminDashboardForm_Load(object sender, EventArgs e)
+        {
+            // Isi DataGridView Pesanan
+            dgvPesanan.DataSource = srvDashboard.TampilkanPesanan();
+
+            // Isi DataGridView Sparepart
+            dgvsparepart.DataSource = srvDashboard.TampilkanSparepart();
+
+            // Isi DataGridView User
+            dgvuser.DataSource = srvDashboard.TampilkanUser();
+
+            // Isi total pesanan ke TextBox/Label
+            totalpesanan_txbox.Text = srvDashboard.HitungTotalPesanan().ToString();
+
+            MessageBox.Show("Total pesanan: " + srvDashboard.HitungTotalPesanan());
+
+            dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvsparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvuser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,6 +77,25 @@ namespace PBO_BENGKEL.view
             pesanan.StartPosition = FormStartPosition.Manual;
             pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
             pesanan.Show();
+        }
+        private void totalpesanan_txbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvuser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPesanan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvsparepart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

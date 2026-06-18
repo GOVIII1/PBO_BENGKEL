@@ -95,10 +95,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\Dashboard_cls.cs" />
     <Compile Include="model\Jasa_cls.cs" />
     <Compile Include="model\Pesanan_cls.cs" />
     <Compile Include="model\Sparepart_cls.cs" />
     <Compile Include="model\Struk_clz.cs" />
+    <Compile Include="service\AdminDashboard_service.cs" />
     <Compile Include="service\AdminJasa_service.cs" />
     <Compile Include="service\AdminSparepart_service.cs" />
     <Compile Include="service\AdminPesanan_service.cs" />

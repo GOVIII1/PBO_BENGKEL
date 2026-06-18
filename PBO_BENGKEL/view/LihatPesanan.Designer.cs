@@ -31,10 +31,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPesanan = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nohp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesanan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,52 +61,21 @@
             this.dgvPesanan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPesanan.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPesanan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nama,
-            this.nohp,
-            this.plat});
             this.dgvPesanan.Location = new System.Drawing.Point(72, 117);
             this.dgvPesanan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPesanan.Name = "dgvPesanan";
             this.dgvPesanan.RowHeadersVisible = false;
             this.dgvPesanan.RowHeadersWidth = 51;
-            this.dgvPesanan.Size = new System.Drawing.Size(559, 307);
+            this.dgvPesanan.Size = new System.Drawing.Size(636, 307);
             this.dgvPesanan.TabIndex = 15;
             this.dgvPesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPesanan_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.FillWeight = 70F;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            // 
-            // Nama
-            // 
-            this.Nama.HeaderText = "Pelanggan";
-            this.Nama.MinimumWidth = 6;
-            this.Nama.Name = "Nama";
-            // 
-            // nohp
-            // 
-            this.nohp.HeaderText = "Nomor HP";
-            this.nohp.MinimumWidth = 6;
-            this.nohp.Name = "nohp";
-            // 
-            // plat
-            // 
-            this.plat.HeaderText = "Plat Motor";
-            this.plat.MinimumWidth = 6;
-            this.plat.Name = "plat";
             // 
             // LihatPesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(681, 512);
+            this.ClientSize = new System.Drawing.Size(773, 512);
             this.Controls.Add(this.dgvPesanan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -129,9 +94,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPesanan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nohp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plat;
     }
 }

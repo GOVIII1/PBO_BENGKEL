@@ -31,10 +31,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPesanan = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nohp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesanan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,42 +66,44 @@
             this.dgvPesanan.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPesanan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.ID,
+            this.Nama,
+            this.nohp,
+            this.plat});
             this.dgvPesanan.Location = new System.Drawing.Point(72, 117);
             this.dgvPesanan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPesanan.Name = "dgvPesanan";
             this.dgvPesanan.RowHeadersVisible = false;
             this.dgvPesanan.RowHeadersWidth = 51;
-            this.dgvPesanan.Size = new System.Drawing.Size(517, 307);
+            this.dgvPesanan.Size = new System.Drawing.Size(559, 307);
             this.dgvPesanan.TabIndex = 15;
             this.dgvPesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPesanan_CellContentClick);
             // 
-            // Column1
+            // ID
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.FillWeight = 70F;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
             // 
-            // Column2
+            // Nama
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.Nama.HeaderText = "Pelanggan";
+            this.Nama.MinimumWidth = 6;
+            this.Nama.Name = "Nama";
             // 
-            // Column3
+            // nohp
             // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
+            this.nohp.HeaderText = "Nomor HP";
+            this.nohp.MinimumWidth = 6;
+            this.nohp.Name = "nohp";
             // 
-            // Column4
+            // plat
             // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.plat.HeaderText = "Plat Motor";
+            this.plat.MinimumWidth = 6;
+            this.plat.Name = "plat";
             // 
             // LihatPesanan
             // 
@@ -127,9 +129,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPesanan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nohp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plat;
     }
 }

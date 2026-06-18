@@ -14,17 +14,23 @@ namespace PBO_BENGKEL.view
 {
     public partial class LihatPesanan : Form
     {
-        private AdminPesanan_service controller = new AdminPesanan_service();
+        private AdminPesanan_service srv = new AdminPesanan_service();
 
         public LihatPesanan()
         {
             InitializeComponent();
+            MuatData();
         }
 
-        private void LihatPesanan_Load(object sender, EventArgs e)
+        private void MuatData()
         {
-            // tampilkan data dari DB ke DataGridView
-            dgvPesanan.DataSource = controller.TampilkanSemua();
+            dgvPesanan.DataSource = srv.TampilkanSemua();
+            dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPesanan.AllowUserToAddRows = false;
+            dgvPesanan.ReadOnly = true;
+            dgvPesanan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+           
         }
 
         private void dgvPesanan_CellContentClick(object sender, DataGridViewCellEventArgs e) { }

@@ -29,18 +29,18 @@ namespace PBO_BENGKEL.view
 
         private void FormTindakanMekanik_Load(object sender, EventArgs e)
         {
-            //lblMekanik.Text = "Mekanik Bertugas : Figo";
+            lblMekanik.Text = "Mekanik Bertugas : Figo";
 
-            //lblMotor.Text =
-            //    "Motor Dikerjakan : " + platMotor;
+            lblMotor.Text =
+                "Motor Dikerjakan : " + platMotor;
 
-            //lblKeluhan.Text =
-            //    "Keluhan : " + keluhan;
+            lblKeluhan.Text =
+                "Keluhan : " + keluhan;
 
-            //lblIdServis.Text =
-            //    "ID Servis : " + idServis;
+            lblIdServis.Text =
+                "ID Servis : " + idServis;
 
-            //LoadJasa();
+            LoadJasa();
         }
 
         private void LoadJasa()

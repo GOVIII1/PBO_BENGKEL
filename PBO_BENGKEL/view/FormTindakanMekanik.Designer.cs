@@ -38,9 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pekerjaanselesai_btn = new System.Windows.Forms.Button();
             this.daftarselesai_dgv = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.pekerjaanselesai_btn = new System.Windows.Forms.Button();
+            this.lblMekanik = new System.Windows.Forms.Label();
+            this.lblMotor = new System.Windows.Forms.Label();
+            this.lblIdServis = new System.Windows.Forms.Label();
+            this.lblKeluhan = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.tambahJasa_pnl.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.daftarselesai_dgv)).BeginInit();
@@ -59,6 +64,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblKeluhan);
+            this.panel1.Controls.Add(this.lblIdServis);
+            this.panel1.Controls.Add(this.lblMotor);
+            this.panel1.Controls.Add(this.lblMekanik);
             this.panel1.Location = new System.Drawing.Point(47, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1203, 136);
@@ -149,6 +158,19 @@
             this.panel3.Size = new System.Drawing.Size(574, 248);
             this.panel3.TabIndex = 3;
             // 
+            // pekerjaanselesai_btn
+            // 
+            this.pekerjaanselesai_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pekerjaanselesai_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pekerjaanselesai_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pekerjaanselesai_btn.Location = new System.Drawing.Point(23, 189);
+            this.pekerjaanselesai_btn.Name = "pekerjaanselesai_btn";
+            this.pekerjaanselesai_btn.Size = new System.Drawing.Size(526, 44);
+            this.pekerjaanselesai_btn.TabIndex = 6;
+            this.pekerjaanselesai_btn.TabStop = false;
+            this.pekerjaanselesai_btn.Text = "Semua Pekerjaan Selesai";
+            this.pekerjaanselesai_btn.UseVisualStyleBackColor = false;
+            // 
             // daftarselesai_dgv
             // 
             this.daftarselesai_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -169,18 +191,45 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Daftar yang Sudah Dikerjakan:";
             // 
-            // pekerjaanselesai_btn
+            // lblMekanik
             // 
-            this.pekerjaanselesai_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pekerjaanselesai_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pekerjaanselesai_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pekerjaanselesai_btn.Location = new System.Drawing.Point(23, 189);
-            this.pekerjaanselesai_btn.Name = "pekerjaanselesai_btn";
-            this.pekerjaanselesai_btn.Size = new System.Drawing.Size(526, 44);
-            this.pekerjaanselesai_btn.TabIndex = 6;
-            this.pekerjaanselesai_btn.TabStop = false;
-            this.pekerjaanselesai_btn.Text = "Semua Pekerjaan Selesai";
-            this.pekerjaanselesai_btn.UseVisualStyleBackColor = false;
+            this.lblMekanik.AutoSize = true;
+            this.lblMekanik.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMekanik.Location = new System.Drawing.Point(14, 12);
+            this.lblMekanik.Name = "lblMekanik";
+            this.lblMekanik.Size = new System.Drawing.Size(165, 23);
+            this.lblMekanik.TabIndex = 4;
+            this.lblMekanik.Text = "Mekanik Bertugas :";
+            // 
+            // lblMotor
+            // 
+            this.lblMotor.AutoSize = true;
+            this.lblMotor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblMotor.Location = new System.Drawing.Point(14, 40);
+            this.lblMotor.Name = "lblMotor";
+            this.lblMotor.Size = new System.Drawing.Size(162, 23);
+            this.lblMotor.TabIndex = 5;
+            this.lblMotor.Text = "Motor Dikerjakan :";
+            // 
+            // lblIdServis
+            // 
+            this.lblIdServis.AutoSize = true;
+            this.lblIdServis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblIdServis.Location = new System.Drawing.Point(14, 93);
+            this.lblIdServis.Name = "lblIdServis";
+            this.lblIdServis.Size = new System.Drawing.Size(91, 23);
+            this.lblIdServis.TabIndex = 6;
+            this.lblIdServis.Text = "ID Servis :";
+            // 
+            // lblKeluhan
+            // 
+            this.lblKeluhan.AutoSize = true;
+            this.lblKeluhan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblKeluhan.Location = new System.Drawing.Point(15, 67);
+            this.lblKeluhan.Name = "lblKeluhan";
+            this.lblKeluhan.Size = new System.Drawing.Size(84, 23);
+            this.lblKeluhan.TabIndex = 7;
+            this.lblKeluhan.Text = "Keluhan :";
             // 
             // FormTindakanMekanik
             // 
@@ -194,6 +243,8 @@
             this.Name = "FormTindakanMekanik";
             this.Text = "FormTindakanMekanik";
             this.Load += new System.EventHandler(this.FormTindakanMekanik_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tambahJasa_pnl.ResumeLayout(false);
             this.tambahJasa_pnl.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -219,5 +270,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView daftarselesai_dgv;
         private System.Windows.Forms.Button pekerjaanselesai_btn;
+        private System.Windows.Forms.Label lblMekanik;
+        private System.Windows.Forms.Label lblIdServis;
+        private System.Windows.Forms.Label lblMotor;
+        private System.Windows.Forms.Label lblKeluhan;
     }
 }

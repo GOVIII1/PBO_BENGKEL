@@ -59,7 +59,7 @@
             // txtIdPart
             // 
             this.txtIdPart.Location = new System.Drawing.Point(115, 75);
-            this.txtIdPart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdPart.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdPart.Name = "txtIdPart";
             this.txtIdPart.Size = new System.Drawing.Size(132, 22);
             this.txtIdPart.TabIndex = 1;
@@ -67,7 +67,7 @@
             // txtNamaBarang
             // 
             this.txtNamaBarang.Location = new System.Drawing.Point(115, 126);
-            this.txtNamaBarang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNamaBarang.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamaBarang.Name = "txtNamaBarang";
             this.txtNamaBarang.Size = new System.Drawing.Size(132, 22);
             this.txtNamaBarang.TabIndex = 2;
@@ -75,7 +75,7 @@
             // txtStok
             // 
             this.txtStok.Location = new System.Drawing.Point(115, 175);
-            this.txtStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStok.Margin = new System.Windows.Forms.Padding(4);
             this.txtStok.Name = "txtStok";
             this.txtStok.Size = new System.Drawing.Size(132, 22);
             this.txtStok.TabIndex = 3;
@@ -83,15 +83,15 @@
             // txtHarga
             // 
             this.txtHarga.Location = new System.Drawing.Point(115, 224);
-            this.txtHarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHarga.Margin = new System.Windows.Forms.Padding(4);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(132, 22);
             this.txtHarga.TabIndex = 4;
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(115, 256);
-            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpan.Location = new System.Drawing.Point(363, 79);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(157, 28);
             this.btnSimpan.TabIndex = 5;
@@ -104,8 +104,8 @@
             this.dgvSparepart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSparepart.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvSparepart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSparepart.Location = new System.Drawing.Point(115, 303);
-            this.dgvSparepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSparepart.Location = new System.Drawing.Point(115, 275);
+            this.dgvSparepart.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSparepart.Name = "dgvSparepart";
             this.dgvSparepart.RowHeadersVisible = false;
             this.dgvSparepart.RowHeadersWidth = 51;
@@ -156,8 +156,8 @@
             // 
             // btnUbah
             // 
-            this.btnUbah.Location = new System.Drawing.Point(280, 256);
-            this.btnUbah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUbah.Location = new System.Drawing.Point(363, 137);
+            this.btnUbah.Margin = new System.Windows.Forms.Padding(4);
             this.btnUbah.Name = "btnUbah";
             this.btnUbah.Size = new System.Drawing.Size(157, 28);
             this.btnUbah.TabIndex = 11;
@@ -181,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(681, 512);
+            this.ClientSize = new System.Drawing.Size(772, 490);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUbah);
             this.Controls.Add(this.label5);
@@ -196,7 +196,7 @@
             this.Controls.Add(this.txtIdPart);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminSparepartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdminSparepartForm";

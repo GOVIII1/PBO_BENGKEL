@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.totalpesanan_txbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesanan)).BeginInit();
@@ -181,12 +182,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(259, 106);
+            this.label3.Location = new System.Drawing.Point(231, 106);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 31);
+            this.label3.Size = new System.Drawing.Size(206, 29);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Bengkel ambem";
+            this.label3.Text = "Sistem Manajemen";
             // 
             // label4
             // 
@@ -208,11 +209,23 @@
             this.totalpesanan_txbox.TabIndex = 20;
             this.totalpesanan_txbox.TextChanged += new System.EventHandler(this.totalpesanan_txbox_TextChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(303, 135);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(193, 29);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Bengkel Mekanik";
+            // 
             // AdminDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.totalpesanan_txbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -224,6 +237,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminDashboardForm";
             this.Text = "AdminDashboardForm";
+            this.Load += new System.EventHandler(this.AdminDashboardForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).EndInit();
@@ -250,5 +264,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox totalpesanan_txbox;
+        private System.Windows.Forms.Label label5;
     }
 }

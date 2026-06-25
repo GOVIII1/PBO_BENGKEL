@@ -44,7 +44,7 @@
             // txtIdJasa
             // 
             this.txtIdJasa.Location = new System.Drawing.Point(188, 75);
-            this.txtIdJasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdJasa.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdJasa.Name = "txtIdJasa";
             this.txtIdJasa.Size = new System.Drawing.Size(132, 22);
             this.txtIdJasa.TabIndex = 0;
@@ -52,7 +52,7 @@
             // txtNamaJasa
             // 
             this.txtNamaJasa.Location = new System.Drawing.Point(188, 122);
-            this.txtNamaJasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNamaJasa.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamaJasa.Name = "txtNamaJasa";
             this.txtNamaJasa.Size = new System.Drawing.Size(132, 22);
             this.txtNamaJasa.TabIndex = 1;
@@ -60,7 +60,7 @@
             // txtTarif
             // 
             this.txtTarif.Location = new System.Drawing.Point(188, 172);
-            this.txtTarif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTarif.Margin = new System.Windows.Forms.Padding(4);
             this.txtTarif.Name = "txtTarif";
             this.txtTarif.Size = new System.Drawing.Size(132, 22);
             this.txtTarif.TabIndex = 2;
@@ -72,7 +72,7 @@
             this.dgvJasa.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJasa.Location = new System.Drawing.Point(188, 229);
-            this.dgvJasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvJasa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvJasa.Name = "dgvJasa";
             this.dgvJasa.RowHeadersVisible = false;
             this.dgvJasa.RowHeadersWidth = 51;
@@ -84,7 +84,7 @@
             // btnSimpanJasa
             // 
             this.btnSimpanJasa.Location = new System.Drawing.Point(359, 170);
-            this.btnSimpanJasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpanJasa.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimpanJasa.Name = "btnSimpanJasa";
             this.btnSimpanJasa.Size = new System.Drawing.Size(100, 28);
             this.btnSimpanJasa.TabIndex = 4;
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(749, 478);
+            this.ClientSize = new System.Drawing.Size(772, 490);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.txtNamaJasa);
             this.Controls.Add(this.txtIdJasa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminJasaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdminJasaForm";

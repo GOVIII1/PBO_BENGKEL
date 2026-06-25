@@ -24,25 +24,25 @@ namespace PBO_BENGKEL.view
 
         private void AdminDashboardForm_Load(object sender, EventArgs e)
         {
-            // Isi DataGridView Pesanan
-            dgvPesanan.DataSource = srvDashboard.TampilkanPesanan();
+            try
+            {
+                dgvPesanan.DataSource = srvDashboard.TampilkanPesanan();
+                dgvsparepart.DataSource = srvDashboard.TampilkanSparepart();
+                dgvuser.DataSource = srvDashboard.TampilkanUser();
+                totalpesanan_txbox.Text = srvDashboard.HitungTotalPesanan().ToString();
 
-            // Isi DataGridView Sparepart
-            dgvsparepart.DataSource = srvDashboard.TampilkanSparepart();
+                dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvsparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvuser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvPesanan.RowHeadersVisible = false;
+                dgvsparepart.RowHeadersVisible = false;
+                dgvuser.RowHeadersVisible = false;
 
-            // Isi DataGridView User
-            dgvuser.DataSource = srvDashboard.TampilkanUser();
-
-            // Isi total pesanan ke TextBox/Label
-            totalpesanan_txbox.Text = srvDashboard.HitungTotalPesanan().ToString();
-
-            MessageBox.Show("Total pesanan: " + srvDashboard.HitungTotalPesanan());
-
-            dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvsparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvuser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace PBO_BENGKEL.view
             AdminJasaForm formJasa = new AdminJasaForm();
             formJasa.StartPosition = FormStartPosition.Manual;
             formJasa.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
-            formJasa.Show();
+            formJasa.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,10 +58,19 @@ namespace PBO_BENGKEL.view
             AdminSparepartForm formPart = new AdminSparepartForm();
             formPart.StartPosition = FormStartPosition.Manual;
             formPart.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
-            formPart.ShowDialog();
+            formPart.ShowDialog(); 
 
         }
 
+       
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LihatPesanan pesanan = new LihatPesanan();
+            pesanan.StartPosition = FormStartPosition.Manual;
+            pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
+            pesanan.ShowDialog();
+        } 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -69,14 +78,6 @@ namespace PBO_BENGKEL.view
             // Munculkan kembali form login
             LoginForm formLogin = new LoginForm();
             formLogin.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            LihatPesanan pesanan = new LihatPesanan();
-            pesanan.StartPosition = FormStartPosition.Manual;
-            pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
-            pesanan.Show();
         }
         private void totalpesanan_txbox_TextChanged(object sender, EventArgs e)
         {

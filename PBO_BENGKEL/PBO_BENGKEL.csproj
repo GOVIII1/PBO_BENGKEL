@@ -165,6 +165,9 @@
     <EmbeddedResource Include="view\AdminSparepartForm.resx">
       <DependentUpon>AdminSparepartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\KasirForm.resx">
+      <DependentUpon>KasirForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\LihatPesanan.resx">
       <DependentUpon>LihatPesanan.cs</DependentUpon>
     </EmbeddedResource>

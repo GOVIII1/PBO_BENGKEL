@@ -2,6 +2,7 @@
 using PBO_BENGKEL.konfigurasi;
 using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace PBO_BENGKEL.service
 {
@@ -16,80 +17,56 @@ namespace PBO_BENGKEL.service
         }
 
 
-        // Hitung total pesanan
         public int HitungTotalPesanan()
         {
-            int total = 0;
-            string query = "SELECT COUNT(*) FROM tabel_pesanan";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-
-            conn.Open();
-            total = Convert.ToInt32(cmd.ExecuteScalar());
-            conn.Close();
-
-            return total;
+            try
+            {
+                string query = "SELECT COUNT(*) FROM tabel_pesanan";
+                using (var conn = Koneksi.GetConn())
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    conn.Open();
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            catch
+            {
+                return 0;
+            }
         }
 
         public DataTable TampilkanSparepart()
         {
             DataTable dt = new DataTable();
-            try
+            using (var conn = Koneksi.GetConn())
             {
                 conn.Open();
-                string query = "SELECT id_sparepart AS 'ID Part', nama_sparepart AS 'Nama Barang', stok AS 'Sisa Stok', harga_part AS 'Harga' FROM tabel_sparepart";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            catch (Exception)
-            {
-                // Kalo error biarin kosong aja
-            }
-            finally
-            {
-                conn.Close();
+                string query = "SELECT id_sparepart AS 'ID Part', nama_sparepart AS 'Nama Barang', stok AS 'Sisa Stok',harga_part AS 'Harga' FROM tabel_sparepart";
+                new MySqlDataAdapter(new MySqlCommand(query, conn)).Fill(dt);
             }
             return dt;
         }
+
         public DataTable TampilkanPesanan()
         {
             DataTable dt = new DataTable();
-            try
+            using (var conn = Koneksi.GetConn())
             {
                 conn.Open();
-                string query = "SELECT id_servis AS 'ID Servis', nama_pelanggan AS 'Nama Pelanggan', no_hp AS 'No. HP', keluhan AS 'Keluhan', plat_nomor AS 'Plat Nomor' FROM tabel_pesanan";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            catch (Exception)
-            {
-                // Mengabaikan error agar aplikasi tidak crash, return DataTable kosong jika gagal
-            }
-            finally
-            {
-                conn.Close();
+                string query = "SELECT id_servis AS 'ID Servis', nama_pelanggan AS 'Nama Pelanggan', no_hp AS 'No. HP',keluhan AS 'Keluhan', plat_nomor AS 'Plat Nomor' FROM tabel_pesanan";
+                new MySqlDataAdapter(new MySqlCommand(query, conn)).Fill(dt);
             }
             return dt;
         }
+
         public DataTable TampilkanUser()
         {
             DataTable dt = new DataTable();
-            try
+            using (var conn = Koneksi.GetConn())
             {
                 conn.Open();
                 string query = "SELECT username AS 'Nama User', role AS 'Role' FROM tabel_user";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            catch (Exception)
-            {
-                // Kalo error biarin kosong aja
-            }
-            finally
-            {
-                conn.Close();
+                new MySqlDataAdapter(new MySqlCommand(query, conn)).Fill(dt);
             }
             return dt;
         }

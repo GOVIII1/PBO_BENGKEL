@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.namamekanik_cmb = new System.Windows.Forms.ComboBox();
             this.antrian_dgv = new System.Windows.Forms.DataGridView();
-            this.detail_btn = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Keluhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detail_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.antrian_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +44,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(438, 43);
+            this.label1.Location = new System.Drawing.Point(328, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 20);
+            this.label1.Size = new System.Drawing.Size(137, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "ANTRIAN PESANAN";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -55,18 +56,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 110);
+            this.label2.Location = new System.Drawing.Point(80, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.Size = new System.Drawing.Size(109, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nama Mekanik :";
             // 
             // namamekanik_cmb
             // 
             this.namamekanik_cmb.FormattingEnabled = true;
-            this.namamekanik_cmb.Location = new System.Drawing.Point(253, 108);
+            this.namamekanik_cmb.Location = new System.Drawing.Point(190, 88);
+            this.namamekanik_cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.namamekanik_cmb.Name = "namamekanik_cmb";
-            this.namamekanik_cmb.Size = new System.Drawing.Size(375, 24);
+            this.namamekanik_cmb.Size = new System.Drawing.Size(282, 21);
             this.namamekanik_cmb.TabIndex = 3;
             // 
             // antrian_dgv
@@ -79,22 +82,13 @@
             this.Nama,
             this.Plat,
             this.Keluhan});
-            this.antrian_dgv.Location = new System.Drawing.Point(110, 148);
+            this.antrian_dgv.Location = new System.Drawing.Point(82, 120);
+            this.antrian_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.antrian_dgv.Name = "antrian_dgv";
             this.antrian_dgv.RowHeadersWidth = 51;
             this.antrian_dgv.RowTemplate.Height = 24;
-            this.antrian_dgv.Size = new System.Drawing.Size(800, 426);
+            this.antrian_dgv.Size = new System.Drawing.Size(1157, 466);
             this.antrian_dgv.TabIndex = 4;
-            // 
-            // detail_btn
-            // 
-            this.detail_btn.Location = new System.Drawing.Point(683, 580);
-            this.detail_btn.Name = "detail_btn";
-            this.detail_btn.Size = new System.Drawing.Size(227, 48);
-            this.detail_btn.TabIndex = 6;
-            this.detail_btn.Text = "DETAIL";
-            this.detail_btn.UseVisualStyleBackColor = true;
-            this.detail_btn.Click += new System.EventHandler(this.detail_btn_Click);
             // 
             // ID
             // 
@@ -128,17 +122,29 @@
             this.Keluhan.Name = "Keluhan";
             this.Keluhan.Width = 300;
             // 
-            // AntrianPesanan_frm
+            // detail_btn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.detail_btn.Location = new System.Drawing.Point(512, 471);
+            this.detail_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.detail_btn.Name = "detail_btn";
+            this.detail_btn.Size = new System.Drawing.Size(170, 39);
+            this.detail_btn.TabIndex = 6;
+            this.detail_btn.Text = "DETAIL";
+            this.detail_btn.UseVisualStyleBackColor = true;
+            this.detail_btn.Click += new System.EventHandler(this.detail_btn_Click);
+            // 
+            // MekanikForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 699);
+            this.ClientSize = new System.Drawing.Size(1330, 688);
             this.Controls.Add(this.detail_btn);
             this.Controls.Add(this.antrian_dgv);
             this.Controls.Add(this.namamekanik_cmb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AntrianPesanan_frm";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "MekanikForm";
             this.Text = "AntrianPesanan_frm";
             ((System.ComponentModel.ISupportInitialize)(this.antrian_dgv)).EndInit();
             this.ResumeLayout(false);

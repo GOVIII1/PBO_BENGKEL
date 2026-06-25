@@ -139,18 +139,6 @@
     <Compile Include="view\DetailPesanan_frm.Designer.cs">
       <DependentUpon>DetailPesanan_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\KasirForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\KasirForm.Designer.cs">
-      <DependentUpon>KasirForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\LihatPesanan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\LihatPesanan.Designer.cs">
-      <DependentUpon>LihatPesanan.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

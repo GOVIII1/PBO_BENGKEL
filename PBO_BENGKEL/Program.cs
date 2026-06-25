@@ -11,7 +11,7 @@ namespace PBO_BENGKEL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMekanik());
+            Application.Run(new FormTindakanMekanik());
         }
     }
 }

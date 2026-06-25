@@ -35,7 +35,7 @@
             this.jam_masuk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plat_motor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.keluhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aksi = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.kerjakan_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.antrianbengkel_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,17 +61,18 @@
             // 
             // antrianbengkel_dgv
             // 
+            this.antrianbengkel_dgv.AllowUserToAddRows = false;
             this.antrianbengkel_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.antrianbengkel_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.jam_masuk,
             this.plat_motor,
-            this.keluhan,
-            this.aksi});
+            this.keluhan});
             this.antrianbengkel_dgv.Location = new System.Drawing.Point(29, 115);
             this.antrianbengkel_dgv.Name = "antrianbengkel_dgv";
+            this.antrianbengkel_dgv.RowHeadersVisible = false;
             this.antrianbengkel_dgv.RowHeadersWidth = 51;
             this.antrianbengkel_dgv.RowTemplate.Height = 24;
-            this.antrianbengkel_dgv.Size = new System.Drawing.Size(978, 150);
+            this.antrianbengkel_dgv.Size = new System.Drawing.Size(904, 150);
             this.antrianbengkel_dgv.TabIndex = 2;
             this.antrianbengkel_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.antrianbengkel_dgv_CellContentClick);
             // 
@@ -103,22 +104,23 @@
             this.keluhan.HeaderText = "Keluhan Pelanggan";
             this.keluhan.MinimumWidth = 6;
             this.keluhan.Name = "keluhan";
-            this.keluhan.Width = 225;
+            this.keluhan.Width = 450;
             // 
-            // aksi
+            // kerjakan_btn
             // 
-            this.aksi.HeaderText = "Aksi";
-            this.aksi.MinimumWidth = 6;
-            this.aksi.Name = "aksi";
-            this.aksi.Text = "Kerjakan";
-            this.aksi.UseColumnTextForButtonValue = true;
-            this.aksi.Width = 250;
+            this.kerjakan_btn.Location = new System.Drawing.Point(780, 298);
+            this.kerjakan_btn.Name = "kerjakan_btn";
+            this.kerjakan_btn.Size = new System.Drawing.Size(153, 46);
+            this.kerjakan_btn.TabIndex = 4;
+            this.kerjakan_btn.Text = "KERJAKAN";
+            this.kerjakan_btn.UseVisualStyleBackColor = true;
             // 
             // FormMekanik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 618);
+            this.Controls.Add(this.kerjakan_btn);
             this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.antrianbengkel_dgv);
             this.Controls.Add(this.label2);
@@ -140,6 +142,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jam_masuk;
         private System.Windows.Forms.DataGridViewTextBoxColumn plat_motor;
         private System.Windows.Forms.DataGridViewTextBoxColumn keluhan;
-        private System.Windows.Forms.DataGridViewButtonColumn aksi;
+        private System.Windows.Forms.Button kerjakan_btn;
     }
 }

@@ -139,6 +139,12 @@
     <Compile Include="view\DetailPesanan_frm.Designer.cs">
       <DependentUpon>DetailPesanan_frm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FormTindakanMekanik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormTindakanMekanik.Designer.cs">
+      <DependentUpon>FormTindakanMekanik.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="view\MekanikForm.Designer.cs">
       <DependentUpon>MekanikForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\MekanikForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\MekanikForm2.Designer.cs">
+      <DependentUpon>MekanikForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Pesanan.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="view\DetailPesanan_frm.resx">
       <DependentUpon>DetailPesanan_frm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\FormTindakanMekanik.resx">
+      <DependentUpon>FormTindakanMekanik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="view\MekanikForm.resx">
       <DependentUpon>MekanikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\MekanikForm2.resx">
+      <DependentUpon>MekanikForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Pesanan.resx">
       <DependentUpon>Pesanan.cs</DependentUpon>

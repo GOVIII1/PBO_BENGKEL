@@ -73,7 +73,7 @@ namespace PBO_BENGKEL.service
             try
             {
                 conn.Open();
-                // # Ngambil angka paling gede dari ID yang udah ada di tabel
+                // ambil angka terbesar
                 string query = "SELECT MAX(RIGHT(id_sparepart, 2)) FROM tabel_sparepart";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 object result = cmd.ExecuteScalar();
@@ -82,7 +82,7 @@ namespace PBO_BENGKEL.service
                 {
                     // # Kalau udah ada data, angkanya ditambah 1
                     int maxId = Convert.ToInt32(result) + 1;
-                    idBaru = "S" + maxId.ToString("D2"); // # Hasilnya misal: S06
+                    idBaru = "S" + maxId.ToString("D2"); 
                 }
             }
             catch (Exception)

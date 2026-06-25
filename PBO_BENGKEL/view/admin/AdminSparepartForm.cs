@@ -138,5 +138,10 @@ namespace PBO_BENGKEL.view
                 MessageBox.Show("Jumlah stok sama harga wajib angka ngab!", "Peringatan");
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

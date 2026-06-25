@@ -96,13 +96,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\BayarModel.cs" />
+    <Compile Include="model\Dashboard_cls.cs" />
     <Compile Include="model\Jasa_cls.cs" />
     <Compile Include="model\PesananModel.cs" />
+    <Compile Include="model\Pesanan_cls.cs" />
     <Compile Include="model\Sparepart_cls.cs" />
+    <Compile Include="model\Struk_clz.cs" />
+    <Compile Include="service\AdminDashboard_service.cs" />
     <Compile Include="service\AdminJasa_service.cs" />
+    <Compile Include="service\AdminPesanan_service.cs" />
     <Compile Include="service\AdminSparepart_service.cs" />
     <Compile Include="service\BayarService.cs" />
     <Compile Include="service\PesananService.cs" />
+    <Compile Include="service\Struk_service.cs" />
     <Compile Include="view\admin\AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="view\FormTindakanMekanik.Designer.cs">
       <DependentUpon>FormTindakanMekanik.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\LihatPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LihatPesanan.Designer.cs">
+      <DependentUpon>LihatPesanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     <Compile Include="view\Pesanan.Designer.cs">
       <DependentUpon>Pesanan.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Struk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Struk.Designer.cs">
+      <DependentUpon>Struk.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="view\admin\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +211,9 @@
     <EmbeddedResource Include="view\FormTindakanMekanik.resx">
       <DependentUpon>FormTindakanMekanik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\LihatPesanan.resx">
+      <DependentUpon>LihatPesanan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Pesanan.resx">
       <DependentUpon>Pesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Struk.resx">
+      <DependentUpon>Struk.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

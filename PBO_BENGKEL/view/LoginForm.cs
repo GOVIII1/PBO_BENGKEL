@@ -55,8 +55,8 @@ namespace PBO_BENGKEL.view
                     else if (role == "Kasir")
                     {
                         // # Kalo form kasir belum ada, mending di-comment dulu aja depannya pake garis miring dua // biar ga error
-                        // dashboard formKasir = new dashboard();
-                        // formKasir.Show();
+                        DashboardKasir kasir = new DashboardKasir();
+                        kasir.Show();
                     }
                     else if (role == "Mekanik")
                     {

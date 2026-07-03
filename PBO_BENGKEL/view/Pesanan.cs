@@ -80,7 +80,12 @@ namespace PBO_BENGKEL.view
 
         private void lblJudulForm_Click(object sender, EventArgs e)
         {
+            // Dikosongkan, belum ada fungsi saat judul diklik
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // Dikosongkan, balikin fungsi punya Bana/Arum yang sempet kehapus
         }
     }
 }

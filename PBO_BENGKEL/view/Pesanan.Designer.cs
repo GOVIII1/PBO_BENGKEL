@@ -43,6 +43,8 @@
             this.btnBatal = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +63,8 @@
             // 
             this.lblJudulForm.AutoSize = true;
             this.lblJudulForm.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJudulForm.Location = new System.Drawing.Point(320, 90);
+            this.lblJudulForm.Location = new System.Drawing.Point(420, 90);
+            this.lblJudulForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJudulForm.Name = "lblJudulForm";
             this.lblJudulForm.Size = new System.Drawing.Size(159, 25);
             this.lblJudulForm.TabIndex = 1;
@@ -72,7 +75,8 @@
             // 
             this.lblIdServis.AutoSize = true;
             this.lblIdServis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdServis.Location = new System.Drawing.Point(243, 147);
+            this.lblIdServis.Location = new System.Drawing.Point(321, 136);
+            this.lblIdServis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdServis.Name = "lblIdServis";
             this.lblIdServis.Size = new System.Drawing.Size(69, 19);
             this.lblIdServis.TabIndex = 2;
@@ -82,7 +86,8 @@
             // 
             this.txtIdServis.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtIdServis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdServis.Location = new System.Drawing.Point(350, 147);
+            this.txtIdServis.Location = new System.Drawing.Point(464, 136);
+            this.txtIdServis.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdServis.Name = "txtIdServis";
             this.txtIdServis.ReadOnly = true;
             this.txtIdServis.Size = new System.Drawing.Size(200, 25);
@@ -93,7 +98,8 @@
             // 
             this.lblNama.AutoSize = true;
             this.lblNama.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNama.Location = new System.Drawing.Point(255, 187);
+            this.lblNama.Location = new System.Drawing.Point(337, 185);
+            this.lblNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNama.Name = "lblNama";
             this.lblNama.Size = new System.Drawing.Size(52, 19);
             this.lblNama.TabIndex = 4;
@@ -102,7 +108,8 @@
             // txtNama
             // 
             this.txtNama.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(350, 187);
+            this.txtNama.Location = new System.Drawing.Point(464, 185);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(4);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(200, 25);
             this.txtNama.TabIndex = 5;
@@ -197,15 +204,35 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(800, 60);
+            this.panelHeader.Size = new System.Drawing.Size(1067, 60);
             this.panelHeader.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(324, 230);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 23);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tanggal :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(464, 231);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 15;
             // 
             // FormTambahPesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(1067, 615);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.txtKeluhan);
@@ -254,5 +281,7 @@
 
         private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using PBO_BENGKEL.service;
+using PBO_BENGKEL.view.admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,16 +27,12 @@ namespace PBO_BENGKEL.view
         {
             try
             {
-                dgvPesanan.DataSource = srvDashboard.TampilkanPesanan();
-                dgvsparepart.DataSource = srvDashboard.TampilkanSparepart();
+              
                 dgvuser.DataSource = srvDashboard.TampilkanUser();
                 totalpesanan_txbox.Text = srvDashboard.HitungTotalPesanan().ToString();
 
-                dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvsparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvuser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvPesanan.RowHeadersVisible = false;
-                dgvsparepart.RowHeadersVisible = false;
+                
                 dgvuser.RowHeadersVisible = false;
 
             }
@@ -46,8 +43,9 @@ namespace PBO_BENGKEL.view
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            AdminJasaForm formJasa = new AdminJasaForm();
+  {
+
+      AdminJasaForm formJasa = new AdminJasaForm();
             formJasa.StartPosition = FormStartPosition.Manual;
             formJasa.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
             formJasa.ShowDialog();
@@ -97,6 +95,27 @@ namespace PBO_BENGKEL.view
         private void dgvsparepart_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            LihatPesanan pesanan = new LihatPesanan();
+            pesanan.StartPosition = FormStartPosition.Manual;
+            pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
+            pesanan.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormDashboard pesanan = new FormDashboard();
+            pesanan.StartPosition = FormStartPosition.Manual;
+            pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
+            pesanan.ShowDialog();
         }
     }
 }

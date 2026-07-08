@@ -13,18 +13,18 @@ namespace PBO_BENGKEL.konfigurasi
             return conn;
         }
 
-        // Method untuk menjalankan query SELECT (Mengembalikan bentuk Tabel / DataTable)
         public DataTable eksekusiQuery(string query)
         {
             DataTable dt = new DataTable();
             try
             {
-                MySqlConnection conn = GetConn();
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(dt);
-                conn.Close();
+                using (MySqlConnection conn = GetConn())
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                {
+                    conn.Open();
+                    adapter.Fill(dt);
+                }
             }
             catch (Exception ex)
             {
@@ -33,24 +33,23 @@ namespace PBO_BENGKEL.konfigurasi
             return dt;
         }
 
-        // Method untuk menjalankan query INSERT, UPDATE, DELETE
-        // Method untuk menjalankan query INSERT, UPDATE, DELETE dan mengembalikan jumlah baris yang sukses
         public int eksekusiNonQuery(string query)
         {
             int result = 0;
             try
             {
-                MySqlConnection conn = GetConn();
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                result = cmd.ExecuteNonQuery(); // Eksekusi dan simpan jumlah datanya ke result
-                conn.Close();
+                using (MySqlConnection conn = GetConn())
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    conn.Open();
+                    result = cmd.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error eksekusiNonQuery: " + ex.Message);
             }
-            return result; // Balikin nilai int nya
+            return result;
         }
     }
 }

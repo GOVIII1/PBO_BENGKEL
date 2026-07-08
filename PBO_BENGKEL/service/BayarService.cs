@@ -1,80 +1,88 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using MySql.Data.MySqlClient;
+using PBO_BENGKEL.konfigurasi;
 using PBO_BENGKEL.model;
 
 namespace PBO_BENGKEL.service
 {
     public class BayarService
     {
-        private readonly string _connectionString = "server=localhost;port=3306;username=root;password=;database=pbo_bengkel;";
-
-        public BayarModel GetDetailPembayaranReal(string idServis)
+        public BayarModel GetDetailPembayaran(string idServis)
         {
             BayarModel pesanan = null;
-
-            using (MySqlConnection conn = new MySqlConnection(_connectionString))
+            try
             {
-                try
+                using (MySqlConnection conn = Koneksi.GetConn())
                 {
                     conn.Open();
-
-                    // 1. Ambil data Header dari tabel_pesanan
-                    string queryHeader = "SELECT id_servis, plat_nomor, nama_pelanggan FROM tabel_pesanan WHERE id_servis = @id_servis LIMIT 1";
-                    using (MySqlCommand cmdHeader = new MySqlCommand(queryHeader, conn))
+                    string queryHeader = "SELECT id_servis, plat_nomor, nama_pelanggan FROM pesanan WHERE id_servis = @id LIMIT 1";
+                    using (MySqlCommand cmd = new MySqlCommand(queryHeader, conn))
                     {
-                        cmdHeader.Parameters.AddWithValue("@id_servis", idServis);
-                        using (MySqlDataReader reader = cmdHeader.ExecuteReader())
+                        cmd.Parameters.AddWithValue("@id", idServis);
+                        using (MySqlDataReader r = cmd.ExecuteReader())
                         {
-                            if (reader.Read())
+                            if (r.Read())
                             {
                                 pesanan = new BayarModel
                                 {
-                                    IdServis = reader["id_servis"].ToString(),
-                                    PlatNomor = reader["plat_nomor"].ToString(),
-                                    NamaPelanggan = reader["nama_pelanggan"].ToString(),
+                                    IdServis = r["id_servis"].ToString(),
+                                    PlatNomor = r["plat_nomor"].ToString(),
+                                    NamaPelanggan = r["nama_pelanggan"].ToString(),
                                     TotalTagihan = 0
                                 };
                             }
                         }
                     }
 
-                    // 2. Ambil detail sparepart dari tabel_transaksi_detail di-JOIN ke tabel_sparepart
                     if (pesanan != null)
                     {
-                        string queryDetail = @"SELECT sp.nama_sparepart, td.qty, sp.harga_part 
-                                               FROM tabel_transaksi_detail td
-                                               INNER JOIN tabel_sparepart sp ON td.id_sparepart = sp.id_sparepart
-                                               WHERE td.id_servis = @id_servis";
-
-                        using (MySqlCommand cmdDetail = new MySqlCommand(queryDetail, conn))
+                        string queryDetail = "SELECT nama_item, qty, harga, subtotal FROM detail_servis WHERE id_servis = @id";
+                        using (MySqlCommand cmd = new MySqlCommand(queryDetail, conn))
                         {
-                            cmdDetail.Parameters.AddWithValue("@id_servis", idServis);
-                            using (MySqlDataReader readerDetail = cmdDetail.ExecuteReader())
+                            cmd.Parameters.AddWithValue("@id", idServis);
+                            using (MySqlDataReader r = cmd.ExecuteReader())
                             {
-                                while (readerDetail.Read())
+                                while (r.Read())
                                 {
-                                    var detail = new DetailTagihan
+                                    var item = new DetailTagihan
                                     {
-                                        NamaItem = readerDetail["nama_sparepart"].ToString(),
-                                        Qty = Convert.ToInt32(readerDetail["qty"]),
-                                        HargaSatuan = Convert.ToDecimal(readerDetail["harga_part"])
+                                        NamaItem = r["nama_item"].ToString(),
+                                        Qty = Convert.ToInt32(r["qty"]),
+                                        HargaSatuan = Convert.ToDecimal(r["harga"])
                                     };
-
-                                    pesanan.RincianNota.Add(detail);
-                                    pesanan.TotalTagihan += detail.Subtotal;
+                                    pesanan.RincianNota.Add(item);
+                                    pesanan.TotalTagihan += item.Subtotal;
                                 }
                             }
                         }
                     }
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Gagal ambil data bayar: " + ex.Message);
+            }
+            return pesanan;
+        }
+
+        public bool Lunas(string idServis)
+        {
+            try
+            {
+                using (MySqlConnection conn = Koneksi.GetConn())
                 {
-                    System.Windows.Forms.MessageBox.Show("Gagal mengambil data dari database: " + ex.Message);
+                    conn.Open();
+                    string query = "UPDATE pesanan SET status = 'Lunas' WHERE id_servis = @id";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", idServis);
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
                 }
             }
-
-            return pesanan;
+            catch { return false; }
         }
     }
 }

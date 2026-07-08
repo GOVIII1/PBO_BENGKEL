@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using PBO_BENGKEL.model;
 using PBO_BENGKEL.service;
 
-namespace PBO_BENGKEL.view
+namespace PBO_BENGKEL.view.admin
 {
     public partial class AdminJasaForm : Form
     {
@@ -64,6 +64,58 @@ namespace PBO_BENGKEL.view
         // ==========================================
         // OBAT PENANGKAL ERROR GA SENGAJA KE-KLIK
         // ==========================================
+        private void btnUbahJasa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Jasa_cls js = new Jasa_cls();
+                js.id_jasa = txtIdJasa.Text;
+                js.nama_jasa = txtNamaJasa.Text;
+                js.harga_jasa = Convert.ToInt32(txtTarif.Text);
+
+                if (srv.UbahJasa(js))
+                {
+                    MessageBox.Show("Jasa berhasil diupdate!", "Sukses");
+                    MuatData();
+                    txtNamaJasa.Clear();
+                    txtTarif.Clear();
+                    txtIdJasa.Text = srv.KodeOtomatis();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal update, pilih jasa di tabel dulu!", "Error");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Tarif harga wajib angka!", "Peringatan");
+            }
+        }
+
+        private void btnHapusJasa_Click(object sender, EventArgs e)
+        {
+            string idJasa = txtIdJasa.Text;
+            if (string.IsNullOrEmpty(idJasa) || idJasa == srv.KodeOtomatis())
+            {
+                MessageBox.Show("Pilih jasa di tabel dulu!", "Peringatan");
+                return;
+            }
+            if (MessageBox.Show($"Yakin hapus {txtNamaJasa.Text}?", "Konfirmasi", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (srv.HapusJasa(idJasa))
+                {
+                    MessageBox.Show("Jasa berhasil dihapus!", "Sukses");
+                    MuatData();
+                    txtNamaJasa.Clear();
+                    txtTarif.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal hapus data!", "Error");
+                }
+            }
+        }
+
         private void txtTarif_TextChanged(object sender, EventArgs e)
         {
             // Biarin kosong aja wir
@@ -86,9 +138,5 @@ namespace PBO_BENGKEL.view
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

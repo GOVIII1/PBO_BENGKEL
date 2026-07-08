@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using PBO_BENGKEL.model;   // # Tambahan wajib buat manggil wadah data
 using PBO_BENGKEL.service; // # Tambahan wajib buat manggil otak database
 
-namespace PBO_BENGKEL.view
+namespace PBO_BENGKEL.view.admin
 {
     public partial class AdminSparepartForm : Form
     {
@@ -101,6 +101,30 @@ namespace PBO_BENGKEL.view
             }
         }
 
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtIdPart.Text) || txtIdPart.Text == srv.KodeOtomatis())
+            {
+                MessageBox.Show("Pilih barang di tabel dulu sebelum hapus!", "Peringatan");
+                return;
+            }
+            if (MessageBox.Show($"Yakin hapus {txtNamaBarang.Text}?", "Konfirmasi", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (srv.HapusSparepart(txtIdPart.Text))
+                {
+                    MessageBox.Show("Barang berhasil dihapus!", "Sukses");
+                    MuatData();
+                    txtNamaBarang.Clear();
+                    txtStok.Clear();
+                    txtHarga.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal hapus data!", "Error");
+                }
+            }
+        }
+
         private void btnUbah_Click(object sender, EventArgs e)
         {
             try
@@ -139,9 +163,9 @@ namespace PBO_BENGKEL.view
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void txtIdPart_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

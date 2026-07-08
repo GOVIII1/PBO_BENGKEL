@@ -1,100 +1,76 @@
-﻿using MySql.Data.MySqlClient;
 using PBO_BENGKEL.service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBO_BENGKEL.view
+namespace PBO_BENGKEL.view.admin
 {
     public partial class AdminDashboardForm : Form
     {
-        private AdminDashboard_service srvDashboard;
+        private AdminDashboard_service srv;
+        private Form currentChildForm = null;
+
         public AdminDashboardForm()
         {
             InitializeComponent();
-            srvDashboard = new AdminDashboard_service();
+            srv = new AdminDashboard_service();
+            this.Load += AdminDashboardForm_Load;
         }
-
 
         private void AdminDashboardForm_Load(object sender, EventArgs e)
         {
-            try
+            TampilkanDashboard();
+        }
+
+        private void TampilkanDashboard()
+        {
+            panelContent.Controls.Clear();
+            panelContent.Controls.Add(panelDashboard);
+            panelDashboard.Dock = DockStyle.Fill;
+            panelDashboard.BringToFront();
+            MuatDashboard();
+        }
+
+        private void MuatDashboard()
+        {
+            txtTotalKasir.Text = srv.HitungTotalKasir().ToString();
+            txtTotalMekanik.Text = srv.HitungTotalMekanik().ToString();
+            txtPendapatanHariIni.Text = "Rp " + srv.HitungTotalPendapatanHariIni().ToString("N0");
+            txtTotalPendapatan.Text = "Rp " + srv.HitungTotalPendapatan().ToString("N0");
+            txtTotalJasa.Text = srv.HitungTotalJenisJasa().ToString();
+            txtTotalSparepart.Text = srv.HitungTotalJenisSparepart().ToString();
+        }
+
+        private void BukaChildForm(Form childForm)
+        {
+            panelContent.Controls.Clear();
+            if (currentChildForm != null)
+                currentChildForm.Dispose();
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormClosed += (s, args) => TampilkanDashboard();
+            panelContent.Controls.Add(childForm);
+            childForm.Show();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e) { TampilkanDashboard(); }
+        private void btnSparepart_Click(object sender, EventArgs e) { BukaChildForm(new AdminSparepartForm()); }
+        private void btnJasa_Click(object sender, EventArgs e) { BukaChildForm(new AdminJasaForm()); }
+        private void btnPesanan_Click(object sender, EventArgs e) { BukaChildForm(new LihatPesanan()); }
+        private void btnKaryawan_Click(object sender, EventArgs e) { BukaChildForm(new KelolaKaryawanForm()); }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Yakin logout?", "Konfirmasi", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                dgvPesanan.DataSource = srvDashboard.TampilkanPesanan();
-                dgvsparepart.DataSource = srvDashboard.TampilkanSparepart();
-                dgvuser.DataSource = srvDashboard.TampilkanUser();
-                totalpesanan_txbox.Text = srvDashboard.HitungTotalPesanan().ToString();
-
-                dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvsparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvuser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvPesanan.RowHeadersVisible = false;
-                dgvsparepart.RowHeadersVisible = false;
-                dgvuser.RowHeadersVisible = false;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                Session.Clear();
+                this.Hide();
+                new PBO_BENGKEL.view.LoginForm().Show();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AdminJasaForm formJasa = new AdminJasaForm();
-            formJasa.StartPosition = FormStartPosition.Manual;
-            formJasa.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
-            formJasa.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AdminSparepartForm formPart = new AdminSparepartForm();
-            formPart.StartPosition = FormStartPosition.Manual;
-            formPart.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
-            formPart.ShowDialog(); 
-
-        }
-
-       
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            LihatPesanan pesanan = new LihatPesanan();
-            pesanan.StartPosition = FormStartPosition.Manual;
-            pesanan.Location = new Point(this.Location.X + 200, this.Location.Y + 50);
-            pesanan.ShowDialog();
-        } 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-            // Munculkan kembali form login
-            LoginForm formLogin = new LoginForm();
-            formLogin.Show();
-        }
-        private void totalpesanan_txbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvuser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvPesanan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvsparepart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtTotalKasir_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -1,58 +1,99 @@
-﻿using PBO_BENGKEL.konfigurasi;
+using PBO_BENGKEL.konfigurasi;
 using PBO_BENGKEL.model;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using MySql.Data.MySqlClient;
 
 namespace PBO_BENGKEL.service
 {
     internal class PesananService : Koneksi
     {
-        // 1. LOGIKA GENERATE ID OTOMATIS (Mencari nilai ID tertinggi + 1)
-        public int GenerateAutoId()
+        public string GenerateAutoId()
         {
-            int nextId = 1; // Nilai awal jika tabel masih kosong
-            string query = "SELECT MAX(id_servis) FROM tabel_pesanan";
-
-            // Memanggil fungsi dari dasar koneksi_cls
+            int nextId = 1;
+            string query = "SELECT MAX(CAST(SUBSTRING(id_servis, 5) AS UNSIGNED)) FROM pesanan";
             DataTable dt = eksekusiQuery(query);
-
             if (dt != null && dt.Rows.Count > 0 && dt.Rows[0][0] != DBNull.Value)
-            {
                 nextId = Convert.ToInt32(dt.Rows[0][0]) + 1;
-            }
-
-            return nextId;
+            return "SRV " + nextId;
         }
 
-        // 2. LOGIKA MENAMPILKAN DATA KE TABEL UTAMA KASIR
-        public DataTable TampilkanSemua()
+        public DataTable TampilkanSelesai()
         {
-            //string query = "SELECT * FROM tabel_pesanan";
-            //return eksekusiQuery(query);
-
-
-            // Menggunakan alias (AS) agar judul kolom di DataGridView tampil rapi sesuai desain dashboard
-            string query = "SELECT * FROM tabel_pesanan";
-            return eksekusiQuery(query);
+            return eksekusiQuery("SELECT * FROM pesanan WHERE status != 'Lunas' ORDER BY id_servis");
         }
 
-        // 3. LOGIKA TAMBAH DATA PESANAN
+        public DataTable TampilkanLunas()
+        {
+            return eksekusiQuery("SELECT * FROM pesanan WHERE status = 'Lunas' ORDER BY id_servis");
+        }
+
         public bool TambahPesanan(PesananModel pesanan)
         {
-            // Menyusun query string string interpolation
-            string query = $"INSERT INTO tabel_pesanan (id_servis, nama_pelanggan, no_hp, plat_nomor, keluhan) " +
-                           $"VALUES ({pesanan.IdServis}, '{pesanan.NamaPelanggan}', '{pesanan.NoHp}', '{pesanan.PlatNomor}', '{pesanan.Keluhan}')";
-
-            // Menjalankan perintah non-query
-            int hasil = eksekusiNonQuery(query);
-
-            // Jika hasil lebih dari 0 berarti data berhasil masuk
+            int hasil = 0;
+            try
+            {
+                using (MySqlConnection conn = Koneksi.GetConn())
+                {
+                    conn.Open();
+                    string query = @"INSERT INTO pesanan (id_servis, nama_pelanggan, no_hp, plat_nomor, keluhan, dibuat_oleh, status)
+                                     VALUES (@id_servis, @nama_pelanggan, @no_hp, @plat_nomor, @keluhan, @dibuat_oleh, 'Dikirim')";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id_servis", pesanan.IdServis);
+                        cmd.Parameters.AddWithValue("@nama_pelanggan", pesanan.NamaPelanggan);
+                        cmd.Parameters.AddWithValue("@no_hp", pesanan.NoHp);
+                        cmd.Parameters.AddWithValue("@plat_nomor", pesanan.PlatNomor);
+                        cmd.Parameters.AddWithValue("@keluhan", pesanan.Keluhan ?? "");
+                        cmd.Parameters.AddWithValue("@dibuat_oleh", Session.Username ?? "");
+                        hasil = cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Gagal simpan pesanan: " + ex.Message, "Error",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
             return hasil > 0;
+        }
+
+        public bool UpdateStatus(string idServis, string statusBaru)
+        {
+            try
+            {
+                using (MySqlConnection conn = Koneksi.GetConn())
+                {
+                    conn.Open();
+                    string query = "UPDATE pesanan SET status = @status WHERE id_servis = @id";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@status", statusBaru);
+                        cmd.Parameters.AddWithValue("@id", idServis);
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch { return false; }
+        }
+
+        public bool UpdateStatusDikerjakan(string idServis, string dikerjakanOleh)
+        {
+            try
+            {
+                using (MySqlConnection conn = Koneksi.GetConn())
+                {
+                    conn.Open();
+                    string query = "UPDATE pesanan SET status = 'Dikerjakan', dikerjakan_oleh = @mekanik WHERE id_servis = @id";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@mekanik", dikerjakanOleh);
+                        cmd.Parameters.AddWithValue("@id", idServis);
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch { return false; }
         }
     }
 }

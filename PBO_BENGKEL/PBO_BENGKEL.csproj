@@ -228,6 +228,9 @@
     <EmbeddedResource Include="view\kasir\bayar.resx">
       <DependentUpon>bayar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\kasir\struk.resx">
+      <DependentUpon>struk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +242,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -254,6 +258,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_wg4l3hwg4l3hwg4l.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

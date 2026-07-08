@@ -8,7 +8,7 @@ namespace PBO_BENGKEL.konfigurasi
     {
         public static MySqlConnection GetConn()
         {
-            string str = "server=192.168.137.90;user=wahyu;database=pbo_bengkel;password=wahyu;";
+            string str = "server=localhost;user=root;database=pbo_bengkel(2);password=;";
             MySqlConnection conn = new MySqlConnection(str);
             return conn;
         }

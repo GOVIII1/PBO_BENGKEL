@@ -93,5 +93,21 @@ namespace PBO_BENGKEL.view
         {
             Application.Exit();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+
+        }
+        private void LoginForm_load(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+
+        }
     }
 }

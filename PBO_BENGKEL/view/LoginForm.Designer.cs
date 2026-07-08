@@ -31,12 +31,12 @@
             this.username = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.MaskedTextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.namabengkel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,10 +46,10 @@
             // 
             this.username.AutoSize = true;
             this.username.BackColor = System.Drawing.Color.LightCyan;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(59, 74);
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(177, 144);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(73, 17);
+            this.username.Size = new System.Drawing.Size(83, 20);
             this.username.TabIndex = 0;
             this.username.Text = "Username";
             this.username.Click += new System.EventHandler(this.label1_Click);
@@ -58,42 +58,33 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.txtUsername.Location = new System.Drawing.Point(152, 73);
+            this.txtUsername.Location = new System.Drawing.Point(324, 139);
+            this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(119, 20);
+            this.txtUsername.Size = new System.Drawing.Size(209, 30);
             this.txtUsername.TabIndex = 1;
             // 
             // Password
             // 
             this.Password.AutoSize = true;
             this.Password.BackColor = System.Drawing.Color.LightCyan;
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(59, 118);
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(179, 205);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(69, 17);
+            this.Password.Size = new System.Drawing.Size(78, 20);
             this.Password.TabIndex = 3;
             this.Password.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.txtPassword.Location = new System.Drawing.Point(152, 118);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(119, 20);
-            this.txtPassword.TabIndex = 4;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(106, 150);
+            this.btnLogin.Location = new System.Drawing.Point(239, 276);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(142, 28);
+            this.btnLogin.Size = new System.Drawing.Size(196, 48);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -103,10 +94,11 @@
             // 
             this.namabengkel.AutoSize = true;
             this.namabengkel.BackColor = System.Drawing.Color.LightCyan;
-            this.namabengkel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namabengkel.Location = new System.Drawing.Point(80, 41);
+            this.namabengkel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.namabengkel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namabengkel.Location = new System.Drawing.Point(202, 85);
             this.namabengkel.Name = "namabengkel";
-            this.namabengkel.Size = new System.Drawing.Size(221, 18);
+            this.namabengkel.Size = new System.Drawing.Size(310, 25);
             this.namabengkel.TabIndex = 6;
             this.namabengkel.Text = "Sistem Manajemen Bengkel ";
             this.namabengkel.Click += new System.EventHandler(this.namabengkel_Click);
@@ -115,28 +107,28 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.YellowGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.namabengkel);
-            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.Password);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.username);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 221);
+            this.panel1.Size = new System.Drawing.Size(683, 445);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightCyan;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(285, 7);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(526, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 18);
+            this.label1.Size = new System.Drawing.Size(113, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "SIMBEM";
             // 
@@ -147,30 +139,43 @@
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.exit.Location = new System.Drawing.Point(20, 180);
+            this.exit.Location = new System.Drawing.Point(40, 365);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(38, 23);
+            this.exit.Size = new System.Drawing.Size(73, 34);
             this.exit.TabIndex = 7;
             this.exit.Text = "out";
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtPassword.Location = new System.Drawing.Point(325, 205);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(209, 20);
+            this.txtPassword.TabIndex = 10;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
             // pictureBox1
             // 
-            // pictureBox1 image removed to avoid resx non-string resource issue
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.BackgroundImage = global::PBO_BENGKEL.Properties.Resources.Gemini_Generated_Image_wg4l3hwg4l3hwg4l;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(388, 259);
+            this.pictureBox1.Size = new System.Drawing.Size(680, 445);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(370, 215);
+            this.ClientSize = new System.Drawing.Size(678, 441);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
@@ -189,13 +194,13 @@
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label Password;
-        private System.Windows.Forms.MaskedTextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label namabengkel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }
 

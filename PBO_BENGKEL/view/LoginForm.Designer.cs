@@ -157,9 +157,9 @@
             // 
             // pictureBox1
             // 
-            // pictureBox1 image removed to avoid resx non-string resource issue
+            this.pictureBox1.BackgroundImage = global::PBO_BENGKEL.Properties.Resources.Gemini_Generated_Image_wg4l3hwg4l3hwg4l;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(388, 259);
             this.pictureBox1.TabIndex = 8;

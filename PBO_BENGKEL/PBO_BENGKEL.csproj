@@ -171,6 +171,18 @@
     <Compile Include="view\kasir\struk.Designer.cs">
       <DependentUpon>struk.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\kasir\FormRiwayat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\kasir\FormRiwayat.Designer.cs">
+      <DependentUpon>FormRiwayat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\kasir\FormProfilKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\kasir\FormProfilKasir.Designer.cs">
+      <DependentUpon>FormProfilKasir.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +203,18 @@
     </Compile>
     <Compile Include="view\mekanik\MekanikForm2.Designer.cs">
       <DependentUpon>MekanikForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\mekanik\FormSelesai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\mekanik\FormSelesai.Designer.cs">
+      <DependentUpon>FormSelesai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\mekanik\FormProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\mekanik\FormProfil.Designer.cs">
+      <DependentUpon>FormProfil.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="view\admin\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>

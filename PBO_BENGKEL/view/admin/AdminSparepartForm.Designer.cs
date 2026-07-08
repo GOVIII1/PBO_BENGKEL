@@ -149,7 +149,7 @@ namespace PBO_BENGKEL.view.admin
             // 
             // btnUbah
             // 
-            this.btnUbah.Location = new System.Drawing.Point(272, 111);
+            this.btnUbah.Location = new System.Drawing.Point(272, 120);
             this.btnUbah.Name = "btnUbah";
             this.btnUbah.Size = new System.Drawing.Size(118, 23);
             this.btnUbah.TabIndex = 11;
@@ -159,7 +159,7 @@ namespace PBO_BENGKEL.view.admin
             // 
             // btnHapus
             // 
-            this.btnHapus.Location = new System.Drawing.Point(272, 142);
+            this.btnHapus.Location = new System.Drawing.Point(272, 175);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(118, 23);
             this.btnHapus.TabIndex = 12;

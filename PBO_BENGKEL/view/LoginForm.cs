@@ -37,7 +37,7 @@ namespace PBO_BENGKEL.view
                         {
                             if (!dr.Read())
                             {
-                                MessageBox.Show("Username atau Password salah, Ngab!", "Gagal");
+                                MessageBox.Show("Username atau Password salah!", "Gagal");
                                 return;
                             }
                             username = dr["username"].ToString();

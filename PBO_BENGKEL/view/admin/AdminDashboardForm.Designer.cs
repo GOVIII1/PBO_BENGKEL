@@ -53,7 +53,7 @@
             this.panelSidebar.Controls.Add(this.btnLogout);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
-            this.panelSidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSidebar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(150, 488);
             this.panelSidebar.TabIndex = 1;
@@ -75,7 +75,7 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Location = new System.Drawing.Point(8, 65);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(135, 32);
             this.btnDashboard.TabIndex = 1;
@@ -90,7 +90,7 @@
             this.btnSparepart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSparepart.ForeColor = System.Drawing.Color.White;
             this.btnSparepart.Location = new System.Drawing.Point(8, 106);
-            this.btnSparepart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSparepart.Margin = new System.Windows.Forms.Padding(2);
             this.btnSparepart.Name = "btnSparepart";
             this.btnSparepart.Size = new System.Drawing.Size(135, 32);
             this.btnSparepart.TabIndex = 2;
@@ -105,7 +105,7 @@
             this.btnJasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJasa.ForeColor = System.Drawing.Color.White;
             this.btnJasa.Location = new System.Drawing.Point(8, 146);
-            this.btnJasa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJasa.Margin = new System.Windows.Forms.Padding(2);
             this.btnJasa.Name = "btnJasa";
             this.btnJasa.Size = new System.Drawing.Size(135, 32);
             this.btnJasa.TabIndex = 3;
@@ -120,7 +120,7 @@
             this.btnPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesanan.ForeColor = System.Drawing.Color.White;
             this.btnPesanan.Location = new System.Drawing.Point(8, 187);
-            this.btnPesanan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPesanan.Margin = new System.Windows.Forms.Padding(2);
             this.btnPesanan.Name = "btnPesanan";
             this.btnPesanan.Size = new System.Drawing.Size(135, 32);
             this.btnPesanan.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaryawan.ForeColor = System.Drawing.Color.White;
             this.btnKaryawan.Location = new System.Drawing.Point(8, 228);
-            this.btnKaryawan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKaryawan.Margin = new System.Windows.Forms.Padding(2);
             this.btnKaryawan.Name = "btnKaryawan";
             this.btnKaryawan.Size = new System.Drawing.Size(135, 32);
             this.btnKaryawan.TabIndex = 5;
@@ -150,7 +150,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(8, 406);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(135, 32);
             this.btnLogout.TabIndex = 6;
@@ -163,7 +163,7 @@
             // 
             this.panelContent.Controls.Add(this.panelDashboard);
             this.panelContent.Location = new System.Drawing.Point(150, 0);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(2);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(600, 488);
             this.panelContent.TabIndex = 0;
@@ -178,7 +178,7 @@
             this.panelDashboard.Controls.Add(this.cardTotalJasa);
             this.panelDashboard.Controls.Add(this.cardTotalSparepart);
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
-            this.panelDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(600, 488);
             this.panelDashboard.TabIndex = 0;
@@ -197,9 +197,9 @@
             // 
             this.cardTotalKasir.Controls.Add(this.txtTotalKasir);
             this.cardTotalKasir.Location = new System.Drawing.Point(15, 57);
-            this.cardTotalKasir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalKasir.Margin = new System.Windows.Forms.Padding(2);
             this.cardTotalKasir.Name = "cardTotalKasir";
-            this.cardTotalKasir.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalKasir.Padding = new System.Windows.Forms.Padding(2);
             this.cardTotalKasir.Size = new System.Drawing.Size(135, 81);
             this.cardTotalKasir.TabIndex = 1;
             this.cardTotalKasir.TabStop = false;
@@ -208,7 +208,7 @@
             // txtTotalKasir
             // 
             this.txtTotalKasir.Location = new System.Drawing.Point(8, 34);
-            this.txtTotalKasir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalKasir.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalKasir.Name = "txtTotalKasir";
             this.txtTotalKasir.ReadOnly = true;
             this.txtTotalKasir.Size = new System.Drawing.Size(121, 20);
@@ -219,9 +219,9 @@
             // 
             this.cardTotalMekanik.Controls.Add(this.txtTotalMekanik);
             this.cardTotalMekanik.Location = new System.Drawing.Point(180, 57);
-            this.cardTotalMekanik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalMekanik.Margin = new System.Windows.Forms.Padding(2);
             this.cardTotalMekanik.Name = "cardTotalMekanik";
-            this.cardTotalMekanik.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalMekanik.Padding = new System.Windows.Forms.Padding(2);
             this.cardTotalMekanik.Size = new System.Drawing.Size(135, 81);
             this.cardTotalMekanik.TabIndex = 2;
             this.cardTotalMekanik.TabStop = false;
@@ -230,7 +230,7 @@
             // txtTotalMekanik
             // 
             this.txtTotalMekanik.Location = new System.Drawing.Point(8, 34);
-            this.txtTotalMekanik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalMekanik.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalMekanik.Name = "txtTotalMekanik";
             this.txtTotalMekanik.ReadOnly = true;
             this.txtTotalMekanik.Size = new System.Drawing.Size(121, 20);
@@ -240,9 +240,9 @@
             // 
             this.cardPendapatanHariIni.Controls.Add(this.txtPendapatanHariIni);
             this.cardPendapatanHariIni.Location = new System.Drawing.Point(345, 57);
-            this.cardPendapatanHariIni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardPendapatanHariIni.Margin = new System.Windows.Forms.Padding(2);
             this.cardPendapatanHariIni.Name = "cardPendapatanHariIni";
-            this.cardPendapatanHariIni.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardPendapatanHariIni.Padding = new System.Windows.Forms.Padding(2);
             this.cardPendapatanHariIni.Size = new System.Drawing.Size(135, 81);
             this.cardPendapatanHariIni.TabIndex = 3;
             this.cardPendapatanHariIni.TabStop = false;
@@ -251,7 +251,7 @@
             // txtPendapatanHariIni
             // 
             this.txtPendapatanHariIni.Location = new System.Drawing.Point(8, 34);
-            this.txtPendapatanHariIni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPendapatanHariIni.Margin = new System.Windows.Forms.Padding(2);
             this.txtPendapatanHariIni.Name = "txtPendapatanHariIni";
             this.txtPendapatanHariIni.ReadOnly = true;
             this.txtPendapatanHariIni.Size = new System.Drawing.Size(121, 20);
@@ -261,9 +261,9 @@
             // 
             this.cardTotalPendapatan.Controls.Add(this.txtTotalPendapatan);
             this.cardTotalPendapatan.Location = new System.Drawing.Point(15, 154);
-            this.cardTotalPendapatan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalPendapatan.Margin = new System.Windows.Forms.Padding(2);
             this.cardTotalPendapatan.Name = "cardTotalPendapatan";
-            this.cardTotalPendapatan.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalPendapatan.Padding = new System.Windows.Forms.Padding(2);
             this.cardTotalPendapatan.Size = new System.Drawing.Size(135, 81);
             this.cardTotalPendapatan.TabIndex = 4;
             this.cardTotalPendapatan.TabStop = false;
@@ -272,7 +272,7 @@
             // txtTotalPendapatan
             // 
             this.txtTotalPendapatan.Location = new System.Drawing.Point(8, 34);
-            this.txtTotalPendapatan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalPendapatan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalPendapatan.Name = "txtTotalPendapatan";
             this.txtTotalPendapatan.ReadOnly = true;
             this.txtTotalPendapatan.Size = new System.Drawing.Size(121, 20);
@@ -282,9 +282,9 @@
             // 
             this.cardTotalJasa.Controls.Add(this.txtTotalJasa);
             this.cardTotalJasa.Location = new System.Drawing.Point(180, 154);
-            this.cardTotalJasa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalJasa.Margin = new System.Windows.Forms.Padding(2);
             this.cardTotalJasa.Name = "cardTotalJasa";
-            this.cardTotalJasa.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalJasa.Padding = new System.Windows.Forms.Padding(2);
             this.cardTotalJasa.Size = new System.Drawing.Size(135, 81);
             this.cardTotalJasa.TabIndex = 5;
             this.cardTotalJasa.TabStop = false;
@@ -293,7 +293,7 @@
             // txtTotalJasa
             // 
             this.txtTotalJasa.Location = new System.Drawing.Point(8, 34);
-            this.txtTotalJasa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalJasa.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalJasa.Name = "txtTotalJasa";
             this.txtTotalJasa.ReadOnly = true;
             this.txtTotalJasa.Size = new System.Drawing.Size(121, 20);
@@ -303,9 +303,9 @@
             // 
             this.cardTotalSparepart.Controls.Add(this.txtTotalSparepart);
             this.cardTotalSparepart.Location = new System.Drawing.Point(345, 154);
-            this.cardTotalSparepart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalSparepart.Margin = new System.Windows.Forms.Padding(2);
             this.cardTotalSparepart.Name = "cardTotalSparepart";
-            this.cardTotalSparepart.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cardTotalSparepart.Padding = new System.Windows.Forms.Padding(2);
             this.cardTotalSparepart.Size = new System.Drawing.Size(135, 81);
             this.cardTotalSparepart.TabIndex = 6;
             this.cardTotalSparepart.TabStop = false;
@@ -314,7 +314,7 @@
             // txtTotalSparepart
             // 
             this.txtTotalSparepart.Location = new System.Drawing.Point(8, 34);
-            this.txtTotalSparepart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalSparepart.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalSparepart.Name = "txtTotalSparepart";
             this.txtTotalSparepart.ReadOnly = true;
             this.txtTotalSparepart.Size = new System.Drawing.Size(121, 20);
@@ -327,9 +327,9 @@
             this.ClientSize = new System.Drawing.Size(750, 488);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelSidebar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminDashboardForm";
-            this.Text = "Admin Dashboard";
+            this.Text = "  ";
             this.panelSidebar.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
             this.panelDashboard.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace PBO_BENGKEL.service
                         cmd.Parameters.AddWithValue("@id", idServis);
                         using (MySqlDataReader r = cmd.ExecuteReader())
                         {
-                            if (r.Read())
+                            if (r.Read())//masuk
                             {
                                 struk = new Struk_clz
                                 {
@@ -47,13 +47,13 @@ namespace PBO_BENGKEL.service
                             {
                                 while (r.Read())
                                 {
-                                    struk.DaftarItem.Add(new StrukItemModel
+                                    struk.DaftarItem.Add(new StrukItemModel  //tambah
                                     {
                                         NamaItem = r["nama_item"].ToString(),
                                         Qty = Convert.ToInt32(r["qty"]),
                                         HargaSatuan = Convert.ToDecimal(r["harga"])
                                     });
-                                    struk.TotalTagihan += Convert.ToDecimal(r["subtotal"]);
+                                    struk.TotalTagihan += Convert.ToDecimal(r["subtotal"]); //hitung
                                 }
                             }
                         }
